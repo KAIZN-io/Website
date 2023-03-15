@@ -1,0 +1,6 @@
+# *** Warning! Your custom domain is not using HTTPS yet ***
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect default Netlify subdomain to primary domain
+https://kaizn.netlify.com/* https://kaizn.io/:splat 301!
+https://www.kaizn.io/* https://kaizn.io/:splat 301!
