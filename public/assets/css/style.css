@@ -5,22 +5,29 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/assets/fonts/Comfortaa.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --header-height: 155px
 }
-
 
 html,
 body {
     background-color: #fff;
     font-size: 18px;
-    color: #656565;
+    color: #656765;
     width: 100%;
     padding: 0;
     margin-left: 0;
     margin-right: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
 }
 .preloader {
     position: fixed;
@@ -59,7 +66,6 @@ a,
 a:hover,
 a:active,
 a:focus {
-    text-decoration: none;
     outline: none;
 }
 a,
@@ -93,6 +99,10 @@ a{}
 }
 img {
     max-width: 100%;
+}
+img.square {
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 textarea,
 input[type="text"],
@@ -156,25 +166,26 @@ h5 {
 }
 h1 {
     font-size: 3.75rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+    font-family: 'Comfortaa', sans-serif;
 }
 h2 {
     font-size:3rem;
     line-height: 3rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
 }
 h3 {
     font-size:1.875rem;
     line-height: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 300;
+
+    color: #91989f;
 }
 h4 {
     font-size: 2.5rem;
     line-height: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
 }
 h5 {
@@ -207,10 +218,10 @@ p:last-child {
     color: #fff;
 }
 .blackbg{
-    background: #000;
+    background: #0c0c0c;
 }
 .lightbg {
-    background-color: #f9f9f9;
+    background-color: #f9f9fb;
 }
 .transition {
     -webkit-transition: all 300ms linear;
@@ -220,19 +231,34 @@ p:last-child {
     transition: all 300ms linear;
 }
 
+.logo-font {
+    font-family: 'Comfortaa', sans-serif;
+    color: #434343;
+    font-weight: 700;
+}
+
 
 /*
 Section
 */
-.sections {
+.section {
+    width: 100vw;
+    max-width: 1920px;
+
+    margin: 0 auto;
+    
     padding-top:85px;
     padding-bottom: 105px;
+    
     overflow: hidden;
 }
-.sections.footer {
+.section--evenly-spaced {
+    padding-bottom: 85px;
+}
+.section.footer {
     padding-bottom: 80px;
 }
-section .subtitle h5 {
+.section .subtitle h5 {
     margin-top: 10px;
     font-size: 1.3rem;
 }
@@ -240,13 +266,13 @@ section .subtitle h5 {
     max-width: 100%;
     color: #ffffff;
 }
-section .title-half h2 {
+.section .title-half h2 {
     font-size: 3rem;
     line-height: 4rem;
     font-weight: 300;
     margin-bottom: 1.4rem;
 }
-section .subtitle-half h5 {
+.section .subtitle-half h5 {
     font-weight: 100;
     font-size: 17px;
 }
@@ -304,13 +330,13 @@ Separator
     height: 2px;
     width: 60px;
     margin: 20px auto;
-    background: #000;;
+    background: #656765;
 }
 .separator2 {
     height: 2px;
     width: 60px;
     margin:20px 0px;
-    background: #000;
+    background: #656765;
 }
 .separator3 {
     height: 2px;
@@ -451,10 +477,6 @@ Extra height css
 .padding-eighty {
     padding: 40px 0;
 }
-h1 span {
-    color: #5e9a28;
-    font-weight: 400;
-}
 
 /*for placeholder changes*/
 
@@ -509,10 +531,22 @@ input::-ms-input-placeholder {
 }
 
 .header .navbar .navbar-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    
     height:80px;
 
     padding-top: 0;
-    padding-left: 0;
+    padding-bottom: 0;
+
+    font-size: 2rem;
+    color: #434343;
+}
+
+.header .navbar .navbar-header .navbar-brand img {
+    margin-right: 1rem;
+    
+    transition: margin-bottom ease .3s;
 }
 
 .header .navbar .navbar-collapse {
@@ -527,7 +561,11 @@ input::-ms-input-placeholder {
 }
 
 .header.menu-scroll .navbar .navbar-header .navbar-brand {
-    margin-bottom: -32px;
+    margin-bottom: -10px;
+}
+
+.header.menu-scroll .navbar .navbar-header .navbar-brand img {
+    margin-bottom: -22px;
 }
 
 
@@ -558,6 +596,8 @@ input::-ms-input-placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: relative;
 }
 
 .hero__background {
@@ -565,8 +605,58 @@ input::-ms-input-placeholder {
     max-width: 1920px;
     height: auto;
     max-height: 640px;
+}
+
+.hero__background {
     object-fit: cover;
 }
+
+.hero__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero__body {
+    margin-bottom: 4rem;
+}
+
+.hero__body span {
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    padding: .125em 1rem 0em;
+    line-height: 1.78;
+    
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    
+    color: #080808;
+}
+
+.hero__title {
+    font-size: 5rem;
+}
+
+
+.hero__slogan {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.hero__copy {
+    font-size: 1.5rem;
+    line-height: 1.1
+}
+
+
+/* About us section*/
+.aboutus {
+    
+}
+
 
 /*home section*/
 .main_home{
@@ -633,7 +723,7 @@ input::-ms-input-placeholder {
 service section css
 ==========================================================================*/
 .head_title{
-    margin-bottom:60px;
+    margin-bottom: 1.5rem;
 }
 .head_title h2{
     font-size:3.125rem;
@@ -802,22 +892,22 @@ service section css
                     footer section
 ====================================================================*/
 .footer{
-    border-top:1px solid #d8d8d8;
+    background-color: #434343;
+    color: #fcfcfb;
 }
-.copyright_text p{
-    color:#aaa79e;
+
+.copyright_text p {
     font-size:0.8125rem;
-    /*    line-height: 25px;*/
     padding: 40px 20px;
     max-width: 100%;
 }
-.copyright_text p i{
-    padding:0px 10px;
-    color:#ffcb93;
+
+.copyright_text p a {
+    color:#A8D8B9;
 }
-.copyright_text p a{
-    padding:0px 10px;
-    color:#ffcb93;
+
+.copyright_links a:not(last-child) {
+    margin-right: 1rem;
 }
 
 
@@ -904,6 +994,9 @@ service section css
 .main_events_area .single_events p{
     font-size:1.875rem;
     line-height: 2rem;
+}
+.main_events_area .single_events a{
+    color:#A8D8B9;
 }
 .main_events_area .single_events span.e_text{}
 .main_events_area .single_events span.separator3{

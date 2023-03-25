@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 100 100">
   <g style="display:inline">
-    <path d="M0 0h100v100H0z" style="fill:#c3d4c2;fill-opacity:1;stroke:none;stroke-width:.153;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:.335485;stop-color:#000"/>
+    <path d="M0 0h100v100H0z" style="fill:#2D6D4B;fill-opacity:1;stroke:none;stroke-width:.153;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000"/>
   </g>
   <g style="display:inline">
-    <circle cx="50" cy="50" r="50" style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:#c3d4c2;fill-opacity:1;stroke:none;stroke-width:.153;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:.335485;-inkscape-stroke:none;stop-color:#000;stop-opacity:1"/>
+    <circle cx="50" cy="50" r="50" style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:#2D6D4B;fill-opacity:1;stroke:none;stroke-width:.153;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000;stop-opacity:1"/>
   </g>
   <path d="M0 38.197h100M25 0v100M-25 0 75 100" style="fill:none;stroke:#fff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"/>
   <path d="M-3.835 100 53.9 0" style="fill:none;stroke:#fff;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"/>
