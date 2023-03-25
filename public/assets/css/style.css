@@ -242,7 +242,6 @@ p:last-child {
 Section
 */
 .section {
-    width: 100vw;
     max-width: 1920px;
 
     margin: 0 auto;
@@ -601,7 +600,7 @@ input::-ms-input-placeholder {
 }
 
 .hero__background {
-    width: 100vw;
+    width: 100%;
     max-width: 1920px;
     height: auto;
     max-height: 640px;
