@@ -606,7 +606,7 @@ input::-ms-input-placeholder {
     max-height: 640px;
 }
 
-.hero__background {
+.hero__background img {
     object-fit: cover;
 }
 
