@@ -100,9 +100,11 @@ a{}
 img {
     max-width: 100%;
 }
-img.square {
+img.square,
+picture.square img {
     aspect-ratio: 1;
     object-fit: cover;
+    height: auto;
 }
 textarea,
 input[type="text"],
